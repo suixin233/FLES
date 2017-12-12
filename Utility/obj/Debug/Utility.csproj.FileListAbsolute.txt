@@ -1,0 +1,5 @@
+E:\share\RMIS\RMIS\Utility\bin\Debug\Utility.pdb
+E:\share\RMIS\RMIS\Utility\bin\Debug\MySql.Data.dll
+E:\share\RMIS\RMIS\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+E:\share\RMIS\RMIS\Utility\obj\Debug\Utility.dll
+E:\share\RMIS\RMIS\Utility\obj\Debug\Utility.pdb
