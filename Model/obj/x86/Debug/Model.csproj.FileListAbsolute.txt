@@ -1,0 +1,4 @@
+E:\sharespace\FLES\FLES\Model\obj\x86\Debug\Model.csprojResolveAssemblyReference.cache
+E:\sharespace\FLES\FLES\Model\obj\x86\Debug\Model.Properties.Resources.resources
+E:\sharespace\FLES\FLES\Model\obj\x86\Debug\Model.csproj.GenerateResource.Cache
+E:\sharespace\FLES\FLES\Model\obj\x86\Debug\Model.csproj.CoreCompileInputs.cache

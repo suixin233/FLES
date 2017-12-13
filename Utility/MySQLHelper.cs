@@ -15,7 +15,7 @@ namespace Utility
     public class MySqlHelper
     {
         #region 数据库连接字符串
-        public static readonly string ConnString = System.Configuration.ConfigurationManager.ConnectionStrings["RMISConnString"].ToString();
+        public static readonly string ConnString = System.Configuration.ConfigurationManager.ConnectionStrings["FLESConnString"].ToString();
         #endregion
 
         #region PrepareCommand

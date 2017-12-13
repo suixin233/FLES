@@ -1,0 +1,7 @@
+E:\sharespace\FLES\FLES\FLES\bin\FLES.dll.config
+E:\sharespace\FLES\FLES\FLES\bin\FLES.dll
+E:\sharespace\FLES\FLES\FLES\bin\FLES.pdb
+E:\sharespace\FLES\FLES\FLES\obj\Debug\WebSite.csprojResolveAssemblyReference.cache
+E:\sharespace\FLES\FLES\FLES\obj\Debug\WebSite.csproj.CoreCompileInputs.cache
+E:\sharespace\FLES\FLES\FLES\obj\Debug\FLES.dll
+E:\sharespace\FLES\FLES\FLES\obj\Debug\FLES.pdb

@@ -1,0 +1,410 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="test.Master.cs" Inherits="FLES.test" %>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+   <title>无标题页</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+            
+        <link rel="stylesheet" type="text/css" href="cssdropdown.css">
+        
+    <style type="text/css">
+*,body,ul,li,h1,h2{margin:0;padding:0;list-style:none;}
+body{font:12px "Tahoma";}
+#menu{width:200px;margin:auto;}
+	#menu h1{cursor:pointer;color:#FFF;font-size:12px;padding:5px 0 3px 10px;border:#C60 1px solid;margin-top:1px;background-color:#F93;}
+	#menu h2{cursor:pointer;color:#777;font-size:12px;padding:5px 0 3px 10px;border:#E7E7E7 1px solid;border-top-color:#FFF;background-color:#F4F4F4;}
+	#menu ul{padding-left:15px;height:100px;border:#E7E7E7 1px solid;border-top:none;overflow:auto;}
+	#menu ul li{padding:5px 0 3px 10px;}
+	.no{display:none;}
+</style>
+
+<style type="text/css">
+* { margin:0; padding:0; list-style:none;}
+.c_subNav { width:150px; }
+.c_subNav a { text-decoration:none; color:#333;}
+.c_subNav a:hover { color:#f60;}
+.c_subNav ul ul { position:absolute; display:none; right:-150px; top:-1px;}
+.c_subNav li { border-bottom:1px solid #ccc; position:relative; _position:static; float:left; width:100%;
+        top: 0px;
+        left: 0px;
+    }
+.c_subNav a.li { position:relative;}
+.c_subNav li .option { display:block; line-height:15px; padding:5px 5px 5px 25px; background:no-repeat 5px 4px; cursor:pointer; font:12px Verdana; zoom:1; background:url(http://www.14px.com/wp-content/uploads/2009/05/ico.gif) no-repeat;}
+.c_subNav li .option:hover { color:#f60; background-color:#ffa;}
+.c_subNav li .option span { display:block; padding-right:15px; background:url(http://www.14px.com/wp-content/uploads/2009/05/ico.gif) no-repeat right 0;}
+.c_subNav li .option:hover span { background-position:right -15px;}
+.c_subNav .li:hover { z-index:2; background:transparent;}
+.c_subNav .li:hover ul { display:block;}
+.c_subNav .li:hover ul ul { display:none;}
+.c_subNav .li:hover ul { border:1px solid #ccc; border-width:1px 2px 2px 1px; width:150px; background:#fff; padding:1px;}
+.c_subNav .li:hover li { border-bottom:none;}
+.c_subNav .li:hover li .option { padding:2px 5px; background:transparent;}
+.c_subNav .li:hover li .option:hover { background:#0096ff; color:#fff;}
+.c_subNav .li:hover li .option:hover span { background-position:right -30px;}
+.c_subNav .li:hover .li:hover ul { display:block; left:145px; top:-2px;}
+.c_subNav .charges .option { background-position:4px -45px;}
+.c_subNav .biz .option { background-position:4px -70px;}
+.c_subNav .change .option { background-position:4px -95px;}
+.c_subNav .score .option { background-position:4px -120px;}
+.c_subNav .server .option { background-position:4px -145px;}
+.c_subNav .edit .option { background-position:4px -170px;}
+.c_subNav .sms .option { background-position:4px -195px;}
+</style>
+
+    <style type="text/css">
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+.STYLE1 {
+	font-size: 12px;
+	color: #2b7dbb;
+}
+
+
+.STYLE3 {
+	color: #43860c;
+	font-size: 12px;
+}
+.STYLE2 {color: #43860c; font-size: 12px; }
+
+a:link {font-size:12px; text-decoration:none; color:#43860c;}
+a:visited {font-size:12px; text-decoration:none; color:#43860c;}
+a:hover{font-size:12px; text-decoration:none; color:#FF0000;}
+.dxnbControl 
+{
+	font: 9pt Tahoma;
+	color: black;
+	background-color: white;
+	padding: 11px 11px 11px 11px;
+}
+.dxnbGroupHeader, .dxnbGroupHeaderCollapsed
+{
+    text-align: left;
+}
+.dxnbGroupHeader
+{
+	font: bold 9pt Tahoma;
+	color: black;
+	background-color: #E0E0E0;
+	border: solid 1px #A8A8A8;
+	padding: 4px 10px 4px 10px;
+}
+.dxnbGroupContent
+{
+	font: 9pt Tahoma;
+	color: #1E3695;
+	border: solid 1px #A8A8A8;
+	padding: 5px 5px 5px 5px;
+}
+.dxnbItem, .dxnbItemHover, .dxnbItemSelected,
+.dxnbBulletItem, .dxnbBulletItemHover, .dxnbBulletItemSelected
+{
+    text-align: left;
+}
+.dxnbItem
+{
+	padding-top: 4px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.dxnbItem, .dxnbLargeItem, .dxnbBulletItem
+{
+	font: 9pt Tahoma;
+	color: #1E3695;
+}
+
+.divGlobal,.DivTop,.DivBottom{min-width: 760px;width:100%;}
+ .divGlobal{/*border:1px solid #ff0000;*/}
+.DivTop,.DivBottom,.DivMainLeft,.DivMainRight {}
+.DivBottom {clear: both;}
+.DivMainLeft{float:left;}
+.DivMainRight{margin-left:178px;}
+.DivFiexWidth{width:200px;}
+.DivMainRightChild{}
+.clear{clear: both;}
+ ul.ul1{margin:0px;margin-left:0px;padding-left:0px; /*fiexfox里需要设置此项,否则UR和DIV间会有空白*/}
+ li.li1{margin-left:0px;list-style-type:none;}
+ li.liBg {margin-left:0px;background-color:#ffDD00;list-style-type:none;padding:5px;}
+    .STYLE4 {
+	font-size: 12px;
+	color: #1F4A65;
+	font-weight: bold;
+}
+
+a:link {
+	font-size: 12px;
+	color: #06482a;
+	text-decoration: none;
+
+}
+a:visited {
+	font-size: 12px;
+	color: #06482a;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: underline;
+}
+a:active {
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+.STYLE7 {font-size: 12}
+</style>
+<script type="text/JavaScript">
+    function changeWidth() {
+        //document.getElementById("tbHead").style.width=window.screen.availWidth;
+        //document.getElementById("DivMainRight").style.width=window.screen.availWidth-202;
+        document.getElementById("DivMainRight").style.width = document.body.offsetWidth - 202;
+    }
+    window.onresize = changeWidth;
+</script>
+</head>
+<body onload="changeWidth()" >
+    <form id="form1" runat="server">
+        <input id="ob" type="hidden" runat="server" />
+    <table id="tbHead" width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="57" background="../images/main_02.gif">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="110" height="57" background="../images/main_01.gif">&nbsp;</td>
+        <td><table width="743" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="28" background="../images/main_03.gif">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="29"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="61" height="29" background="../images/main_06.gif">&nbsp;</td>
+                <td width="72"><img src="../images/main_07.gif" name="Image1" width="72" height="29" border="0" id="Image1"  /></td>
+                <td width="72"><img src="../images/main_08.gif" name="Image2" width="72" height="29" border="0" id="Image2"  /></td>
+                <td width="292" background="../images/main_09.gif">&nbsp;</td>
+                <td width="40"><img src="../images/main_10.gif" name="Image3" width="40" height="29" border="0" id="Image3"  /></td>
+                <td width="44"><img src="../images/main_11.gif" name="Image4" width="44" height="29" border="0" id="Image4"  /></td>
+                <td width="43"><img src="../images/main_12.gif" name="Image5" width="43" height="29" border="0" id="Image5"  /></td>
+                <td width="44"><img src="../images/main_13.gif" name="Image6" width="44" height="29" border="0" id="Image6"  /></td>
+                <td width="39"><img src="../images/main_14.gif" name="Image7" width="39" height="29" border="0" id="Image7"  /></td>
+                <td width="36"><img src="../images/main_15.gif" width="36" height="29" /></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td width="102" background="../images/main_05.gif">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="26" background="../images/main_18.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="180" height="26" background="../images/main_16.gif">&nbsp;</td>
+        <td>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="400" height="26" valign="center">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="100%" style="background:url(../images/topbg.gif); font-size:12px; color:#2b7dbb;">
+                    <img src="../images/003.gif" width="10" height="10" /><span class="STYLE1">&nbsp;&nbsp;Welcome, <asp:Label ID="LoginName" runat="server" Text=""></asp:Label> <asp:Label ID="UserRole" runat="server"></asp:Label> </span>
+                    
+                                                    </td>
+              </tr>
+            </table>
+            </td>
+            <td valign="center">
+            </td>
+            <td align="right" width="110px">
+            </td>
+          </tr>
+        </table></td>
+        <td width="240">
+                <table border="0" align="right" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td><img src="../images/user.gif" width="10" height="10" />
+                        </td>
+                        <td align="right">
+                            &nbsp;Role： 
+                        </td>
+                        <td align="right">
+                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" 
+                                onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                            </asp:DropDownList>
+                        </td>
+                        <td>
+                            &nbsp;&nbsp;<a href="../Login.aspx">Logout</a>&nbsp;&nbsp;
+                        </td>
+                    </tr>    
+                </table>
+        </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+    
+    <div class="divGlobal">
+        <div class="DivMainLeft">
+            <table width="173" height="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0"  style="table-layout:fixed;">
+      <tr>
+        <td style="width:3px; background:#0a5c8e;">&nbsp;</td>
+        <td><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" style="table-layout:fixed;">
+          <tr>
+            <td height="5" style="line-height:5px; background:#0a5c8e;">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="23" background="../images/main_29.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="30%">&nbsp;</td>
+                <td width="52%"><font style="height:1;font-size:9pt; font-weight:bold; color:#bfdbeb;">&nbsp;&nbsp;MENU</font></td>
+                <td width="18%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td bgcolor="#e5f4fd">
+                
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed">
+
+                  <tr>
+                    <td  style="line-height:4px; background:url(WebOAPlatform/Images/main_38.gif)">&nbsp;</td>
+                  </tr>
+                  <tr>
+
+                    <td>
+
+                           <dxnb:ASPxNavBar ID="ASPxNavBar1" runat="server" DataSourceID="XmlDataSource1" 
+                               CssFilePath="~/App_Themes/Office2003 Blue/{0}/styles.css" 
+                               CssPostfix="Office2003_Blue" GroupSpacing="5px" 
+                               ImageFolder="~/App_Themes/Office2003 Blue/{0}/" Width="100%">
+                       
+                          </dxnb:ASPxNavBar>
+
+
+
+
+                      </td>
+                  </tr>
+                </table>
+                                                 
+                                                        <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
+                                                            DataFile="~/App_Data/SBA.xml" 
+                    XPath="//DemoGroup">
+                                                        </asp:XmlDataSource>
+            </td>
+          </tr>
+          <tr>
+            <td height="23" background="../images/main_45.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="18%">&nbsp;</td>
+                <td width="64%"><div align="center"><font style="height:1;font-size:9pt; color:#bfdbeb;"></font></div></td>
+                <td width="18%">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="9" style="line-height:9px; background:#4B7AC9;">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+        </div>
+        <div id="DivMainRight" class="DivMainRight" style="margin-top: 5px; overflow:auto">
+        <table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="30"><table width="100%"  background="../images/tab_05.gif" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="12" height="30"><img src="../images/tab_03.gif" width="12" height="30" /></td>
+                <td width="1101" background="~/images/tab_05.gif"><img src="../images/311.gif" width="16" height="16" />
+                    
+                    <span class="STYLE4">&nbsp;<asp:Label ID="Title" runat="server" Font-Names="幼圆" Font-Size="Medium"></asp:Label></span>
+                                        <asp:Label ID="Label4" runat="server" Font-Bold="True" 
+                        Text=""></asp:Label>
+                                        </td>
+                <td width="281" background="../images/tab_05.gif">
+                    &nbsp;</td>
+                <td width="16"><img src="../images/tab_07.gif" width="16" height="30" /></td>
+              </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="9" background="../images/tab_12.gif">&nbsp;</td>
+                <td bgcolor="#FFFFFF">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td width="9" background="../images/tab_15.gif" style="width: 8px">&nbsp;</td>
+              </tr>
+            </table>
+            </td>
+          </tr>
+          <tr>
+            <td height="35" background="../images/tab_19.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="12" height="35"><img src="../images/tab_18.gif" width="12" height="35" /></td>
+                <td background="../images/tab_19.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="25%" height="29" nowrap="nowrap"><span class="STYLE1"></span></td>
+                    <td width="75%" valign="top" class="STYLE1"><div align="right">
+                      <table width="352" height="20" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="62" height="22" valign="middle"><div align="right"></div></td>
+                          <td width="50" height="22" valign="middle"><div align="right"></div></td>
+                          <td width="54" height="22" valign="middle"><div align="right"></div></td>
+                          <td width="49" height="22" valign="middle"><div align="right"></div></td>
+                          <td width="59" height="22" valign="middle"><div align="right"></div></td>
+                          <td width="25" height="22" valign="middle"><span class="STYLE7">
+                           
+                          </span></td>
+                          <td width="23" height="22" valign="middle"></td>
+                          <td width="30" height="22" valign="middle"></td>
+                        </tr>
+                      </table>
+                    </div></td>
+                  </tr>
+                </table></td>
+                <td width="16"><img src="../images/tab_20.gif" width="16" height="35" /></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+        </div>
+    </div>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="24" background="../images/main_18.gif"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="29" height="24"></td>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="220" class="STYLE1"><img src="../images/002.gif" width="12" height="12" /> Version: 0.1</td>
+            <td class="STYLE1" align="center">&copy; 2017 Corp Q&amp;R, SMIC. All Rights Reserved.</td>
+            <td width="220" nowrap="nowrap" class="STYLE1"><div align="left"><img src="../images/001.gif" width="12" height="12" /> <span class="STYLE1"> System Date: <asp:Label ID="Time" runat="server" Text=""></asp:Label></span></div></td>
+          </tr>
+        </table></td>
+        <td width="14"></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+    </form>
+</body>
+</html>
+

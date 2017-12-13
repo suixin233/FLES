@@ -3,3 +3,12 @@ E:\share\RMIS\RMIS\Utility\bin\Debug\MySql.Data.dll
 E:\share\RMIS\RMIS\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
 E:\share\RMIS\RMIS\Utility\obj\Debug\Utility.dll
 E:\share\RMIS\RMIS\Utility\obj\Debug\Utility.pdb
+E:\sharespace\FLES\FLES\Utility\bin\Debug\Utility.dll
+E:\sharespace\FLES\FLES\Utility\bin\Debug\Utility.pdb
+E:\sharespace\FLES\FLES\Utility\bin\Debug\ICSharpCode.SharpZipLib.dll
+E:\sharespace\FLES\FLES\Utility\bin\Debug\MySql.Data.dll
+E:\sharespace\FLES\FLES\Utility\bin\Debug\MySql.Data.xml
+E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.dll
+E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.pdb
