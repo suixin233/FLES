@@ -64,9 +64,23 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\WebUlite.cs" />
+    <Content Include="bin\BLL.dll" />
+    <Content Include="bin\BLL.pdb" />
+    <Content Include="bin\DAL.dll" />
+    <Content Include="bin\DAL.pdb" />
     <Content Include="bin\FLES.dll" />
     <Content Include="bin\FLES.pdb" />
+    <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\Model.dll" />
+    <Content Include="bin\Model.pdb" />
+    <Content Include="bin\MySql.Data.dll" />
+    <Content Include="bin\MySql.Data.xml" />
+    <Content Include="bin\NPOI.dll" />
+    <Content Include="bin\NPOI.OOXML.dll" />
+    <Content Include="bin\NPOI.OpenXml4Net.dll" />
+    <Content Include="bin\NPOI.OpenXmlFormats.dll" />
     <Content Include="bin\Utility.dll" />
+    <Content Include="bin\Utility.pdb" />
     <Content Include="images\001.gif" />
     <Content Include="images\002.gif" />
     <Content Include="images\003.gif" />

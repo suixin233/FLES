@@ -285,24 +285,10 @@ a:active {
 
                     <td>
 
-                           <dxnb:ASPxNavBar ID="ASPxNavBar1" runat="server" DataSourceID="XmlDataSource1" 
-                               CssFilePath="~/App_Themes/Office2003 Blue/{0}/styles.css" 
-                               CssPostfix="Office2003_Blue" GroupSpacing="5px" 
-                               ImageFolder="~/App_Themes/Office2003 Blue/{0}/" Width="100%">
-                       
-                          </dxnb:ASPxNavBar>
-
-
-
-
-                      </td>
+                           &nbsp;</td>
                   </tr>
                 </table>
                                                  
-                                                        <asp:XmlDataSource ID="XmlDataSource1" runat="server" 
-                                                            DataFile="~/App_Data/SBA.xml" 
-                    XPath="//DemoGroup">
-                                                        </asp:XmlDataSource>
             </td>
           </tr>
           <tr>
