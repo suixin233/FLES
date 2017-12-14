@@ -22,7 +22,7 @@ namespace BLL
             dal.add(new Model.test(ID, Password, Name));
         }
 
-        public void Update(int ID, string Password, string Name)
+        public void Update(int ID, string Password, string Name, int Original_ID)
         {
             dal.update(new Model.test(ID, Password, Name));
         }

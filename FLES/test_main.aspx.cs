@@ -16,19 +16,30 @@ namespace FLES
 
         }
 
-        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            e.Values["Original_ID"] = e.Values["ID"];
-        }
-
-        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void ASPxGridView1_RowDeleting(object sender, DevExpress.Web.Data.ASPxDataDeletingEventArgs e)
         {
 
         }
 
-        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        protected void ASPxGridView1_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
         {
+            //e.NewValues["ID"] = -1;
+            //e.NewValues["Password"] = GetStringElements1("Password") == "" ? " " : GetStringElements1("Password");
+            //e.NewValues["Name"] = GetStringElements1("Name") == "" ? " " : GetStringElements1("Name");
 
+        }
+
+        protected void ASPxGridView1_RowUpdating(object sender, DevExpress.Web.Data.ASPxDataUpdatingEventArgs e)
+        {
+            //e.NewValues["ID"] = e.OldValues["ID"];
+            //e.NewValues["Password"] = GetStringElements1("Password") == "" ? " " : GetStringElements1("Password");
+            //e.NewValues["Name"] = GetStringElements1("Name") == "" ? " " : GetStringElements1("Name");
+        }
+
+        private string GetStringElements1(string element)
+        {
+            TextBox sub = this.ASPxGridView1.FindEditFormTemplateControl(element) as TextBox;
+            return sub.Text;
         }
     }
 }
