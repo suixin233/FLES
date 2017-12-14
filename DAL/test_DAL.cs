@@ -53,7 +53,9 @@ namespace DAL
             string strSql = "UPDATE test SET Password=@Password,Name=@Name WHERE Id=@Id";
             MySqlParameter[] parameters = {
                     new MySqlParameter("@Password", MySqlDbType.VarChar,255),
-                    new MySqlParameter("@Name", MySqlDbType.VarChar,255)};
+                    new MySqlParameter("@Name", MySqlDbType.VarChar,255),
+                    new MySqlParameter("@Id", MySqlDbType.Int32)
+                                            };
 
             parameters[0].Value = model.Password;
             parameters[1].Value = model.Name;

@@ -238,10 +238,7 @@ a:active {
                             &nbsp;Role： 
                         </td>
                         <td align="right">
-                            <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" 
-                                onselectedindexchanged="DropDownList1_SelectedIndexChanged">
-                            </asp:DropDownList>
-                        </td>
+                            &nbsp;</td>
                         <td>
                             &nbsp;&nbsp;<a href="../Login.aspx">Logout</a>&nbsp;&nbsp;
                         </td>
