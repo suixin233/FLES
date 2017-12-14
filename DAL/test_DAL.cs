@@ -29,7 +29,6 @@ namespace DAL
             MySqlParameter[] parameters = {
                     new MySqlParameter("@Password", MySqlDbType.VarChar,255),
                     new MySqlParameter("@Name", MySqlDbType.VarChar,255),
-
                                           };
             parameters[0].Value = model.Password;
             parameters[1].Value = model.Name;
