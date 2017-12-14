@@ -58,7 +58,7 @@ namespace DAL
 
             parameters[0].Value = model.Password;
             parameters[1].Value = model.Name;
-            parameters[12].Value = model.ID;
+            parameters[2].Value = model.ID;
 
             object obj = Utility.MySqlHelper.ExecuteTxtScalar(strSql.ToString(), parameters);
             if (obj == null)
