@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <group Text="产品品质诊断">
+    <item Text="样本上传" />
+    <item Text="样本管理" />
+  </group>
+  <group Text="缺陷自动分类">
+    <item Text="计数型数据" />
+    <item Text="计量型数据" />
+  </group>
+  <group Text="异常机台定位">
+    <item Text="数据上传" />
+    <item Text="识别框架选择" />
+    <item Text="过程数据分析" />
+    <item Text="历史案例推测" />
+    <item Text="信息融合" />
+  </group>
+  <group Text="异常问题分析">
+    <item Text="加工参数变化显示" />
+    <item Text="问题匹配" />
+    <item Text="原因匹配" />
+  </group>
+  <group Text="解决方案与异常处理">
+    <item Text="解决方案匹配" />
+    <item Text="实际处理上传" />
+    <item Text="解决情况汇总" />
+  </group>
+  <group Text="其他">
+    <item Text="缺陷样本管理" />
+    <item Text="历史案例管理" />
+    <item Text="警报信息管理" />
+    <item Text="识别框架管理" />
+  </group>
+</menu>
