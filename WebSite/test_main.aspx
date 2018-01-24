@@ -69,7 +69,7 @@
                              </dx:GridViewCommandColumn>
                          </Columns>
                      </dx:ASPxGridView>
-                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                     <asp:TextBox ID="TextBox1" runat="server">fuck you </asp:TextBox>
                  </td>
              </tr>
          </table>
