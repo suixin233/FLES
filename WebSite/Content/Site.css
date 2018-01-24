@@ -1,7 +1,11 @@
 html, body {
-    margin: 0;
+    margin: 46 0 0 0;
     padding: 0;
 }
+
+.clear {
+    clear: both
+} 
 
 /* Header */
 .dxpnl-edge.t.headerPane 
@@ -89,14 +93,14 @@ html, body {
 .leftPane.panel
 {
     padding: 1px;
-    width: 200px;
+    width: 100%;
 }
 
 /* Right Panel */
 .rightPane.panel
 {
     padding: 0;
-    width: 250px;
+    width: 100%;
 }
 
 /* Account */
@@ -125,7 +129,7 @@ html, body {
 }
 .dxpnlControl_iOS.leftPane.panel
 {
-    width: 300px;
+    width: 235px;
 }
 .dxpnlControl_iOS.rightPane
 {
@@ -607,12 +611,12 @@ html, body {
 }
 .dxpnlControl_Moderno.leftPane
 {
-    padding: 0px;
+    padding: 200px;
 }
 .dxpnlControl_Moderno.leftPane .dxnbLite_Moderno .dxnb-gr:first-child .dxnb-header,
 .dxpnlControl_Moderno.leftPane .dxnbLite_Moderno .dxnb-gr:first-child .dxnb-headerCollapsed
 {
-    border-top: 0px;
+    border-top: 200px;
 }
 .dxpnlControl_Moderno.rightPane
 {

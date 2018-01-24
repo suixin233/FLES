@@ -1,35 +1,117 @@
-<%@ Master Language="C#" MasterPageFile="~/Root.master" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="WebSite.MainMaster" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="WebSite.RootMaster" %>
 
-<%-- DXCOMMENT: Page Main.master is a master page that contains central area layout --%>
-<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
-        <dx:ASPxPanel ID="LeftPane" runat="server" FixedPosition="WindowLeft" ClientInstanceName="leftPane" CssClass="leftPane" Collapsible="true">
-            <SettingsAdaptivity CollapseAtWindowInnerWidth="1023" />
+<%-- DXCOMMENT: Page Root.master is a master page that contains the root layout (it includes Header, Cental Area, and Footer) --%>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Content/Site.css" />
+</head>
+<body runat="server" id="Body">
+    <form id="form1" runat="server">
+        <dx:ASPxPanel ID="HeaderPane" runat="server" FixedPosition="WindowTop" ClientInstanceName="headerPane" CssClass="headerPane" Collapsible="true">
+            <SettingsAdaptivity CollapseAtWindowInnerWidth="500" />
+            <Styles>
+                <Panel CssClass="panel"></Panel>
+                <ExpandedPanel CssClass="expandedPanel"></ExpandedPanel>
+                <ExpandBar CssClass="bar"></ExpandBar>
+            </Styles>
+            <PanelCollection>
+                <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                        <div class="headerTop">
+                            <div class="templateTitle">
+                                <a id="TitleLink" href="~/" runat="server">上海仪电彩色滤光片质量追溯大数据分析原型系统</a>
+                            </div>
+                            
+                        </div>
+                        <div class="headerMenu">
+
+                        </div>
+                </dx:PanelContent>
+            </PanelCollection>
+            <ExpandBarTemplate>
+                <div class="templateTitle">
+                    <a id="TitleLink" href="~/" runat="server">Project Title</a>
+                </div>
+            </ExpandBarTemplate>
+        </dx:ASPxPanel>
+
+        <script type="text/javascript">
+            function updateHeaderMenuOrientation(){
+                if(!window.headerMenu) return;
+                var orientation = headerPane.IsExpandable() ? 'Vertical' : 'Horizontal';
+                if(orientation !== headerMenu.GetOrientation()) 
+                    headerMenu.SetOrientation(orientation);
+            }
+        </script>
+
+        <dx:ASPxGlobalEvents runat="server">
+            <ClientSideEvents ControlsInitialized="updateHeaderMenuOrientation" BrowserWindowResized="updateHeaderMenuOrientation" />
+        </dx:ASPxGlobalEvents>
+
+        <table width:100%>
+             <tr>
+                 <td style="width: 200px">             
+                    <dx:ASPxPanel ID="LeftPane" runat="server" FixedPosition="WindowLeft" ClientInstanceName="leftPane" CssClass="leftPane" Collapsible="true">
+                        <SettingsAdaptivity CollapseAtWindowInnerWidth="1023" />
+                        <Styles>
+                            <Panel CssClass="panel"></Panel>
+                        </Styles>
+                        <PanelCollection>
+                            <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
+                                    <div class="leftPanel">
+                                        <%-- DXCOMMENT: Configure the left panel's ASPxNavBar --%>
+                                        <dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%" DataSourceID="XmlDataSourceLeft">
+                                            <Border BorderWidth="0px" />
+                                            <Paddings Padding="0px" />
+                                        </dx:ASPxNavBar>
+                                    </div>
+                            </dx:PanelContent>
+                        </PanelCollection>
+                    </dx:ASPxPanel>
+                    <%-- DXCOMMENT: Configure a datasource for the left panel's ASPxNavBar --%>
+                    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/SideMenu.xml" XPath="/menu/*">
+
+                    </asp:XmlDataSource>
+                </td>
+
+                <td style="width: 100%">
+                    <div class="contentPane">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+                </td>
+            </tr>
+            
+
+    
+            <%-- DXCOMMENT: Configure a datasource for the left panel's ASPxNavBar --%>
+            <asp:XmlDataSource ID="XmlDataSourceLeft" runat="server" DataFile="~/App_Data/SideMenu.xml" XPath="/menu/*">
+
+            </asp:XmlDataSource>
+        </table>
+
+        <dx:ASPxPanel ID="FooterPane" runat="server" FixedPosition="WindowBottom" ClientInstanceName="footerPane" CssClass="footerPane">
+            <SettingsAdaptivity HideAtWindowInnerWidth="500" />
             <Styles>
                 <Panel CssClass="panel"></Panel>
             </Styles>
             <PanelCollection>
                 <dx:PanelContent runat="server" SupportsDisabledAttribute="True">
-                        <div class="leftPanel">
-                            <%-- DXCOMMENT: Configure the left panel's ASPxNavBar --%>
-<dx:ASPxNavBar ID="ASPxNavBar1" runat="server" AutoCollapse="True" EnableAnimation="True" Width="100%" DataSourceID="XmlDataSourceLeft">
-    <Border BorderWidth="0px" />
-    <Paddings Padding="0px" />
-</dx:ASPxNavBar>
-
+                        <div class="footerMenu">
+                            
+                        </div>
+                        <div class="copyright">
+                            <dx:ASPxLabel ID="ASPxLabel2" runat="server">
+                            </dx:ASPxLabel>
                         </div>
                 </dx:PanelContent>
             </PanelCollection>
         </dx:ASPxPanel>
 
-        <div class="contentPane">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-        </div>
-            
-
     
-<%-- DXCOMMENT: Configure a datasource for the left panel's ASPxNavBar --%>
-<asp:XmlDataSource ID="XmlDataSourceLeft" runat="server" DataFile="~/App_Data/SideMenu.xml"
-    XPath="/menu/*"></asp:XmlDataSource>
-
     
-</asp:Content>
+    </form>
+</body>
+</html>
