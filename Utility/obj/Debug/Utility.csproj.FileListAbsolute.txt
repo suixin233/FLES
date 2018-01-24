@@ -12,3 +12,9 @@ E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.csprojResolveAssemblyReference
 E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
 E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.dll
 E:\sharespace\FLES\FLES\Utility\obj\Debug\Utility.pdb
+C:\项目文件\FLES\Utility\bin\Debug\Utility.pdb
+C:\项目文件\FLES\Utility\bin\Debug\MySql.Data.dll
+C:\项目文件\FLES\Utility\bin\Debug\MySql.Data.xml
+C:\项目文件\FLES\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
+C:\项目文件\FLES\Utility\obj\Debug\Utility.dll
+C:\项目文件\FLES\Utility\obj\Debug\Utility.pdb
