@@ -67,13 +67,13 @@ namespace WebSite {
         protected global::DevExpress.Web.ASPxNavBar ASPxNavBar1;
         
         /// <summary>
-        /// XmlDataSource1 控件。
+        /// XmlDataSourceLeft 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSource1;
+        protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSourceLeft;
         
         /// <summary>
         /// MainContent 控件。
@@ -83,15 +83,6 @@ namespace WebSite {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
-        
-        /// <summary>
-        /// XmlDataSourceLeft 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSourceLeft;
         
         /// <summary>
         /// FooterPane 控件。

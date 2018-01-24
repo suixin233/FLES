@@ -72,7 +72,7 @@
                         </PanelCollection>
                     </dx:ASPxPanel>
                     <%-- DXCOMMENT: Configure a datasource for the left panel's ASPxNavBar --%>
-                    <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/SideMenu.xml" XPath="/menu/*">
+                    <asp:XmlDataSource ID="XmlDataSourceLeft" runat="server" DataFile="~/App_Data/SideMenu.xml" XPath="/Demos/*">
 
                     </asp:XmlDataSource>
                 </td>
@@ -83,13 +83,7 @@
                     </div>
                 </td>
             </tr>
-            
-
-    
-            <%-- DXCOMMENT: Configure a datasource for the left panel's ASPxNavBar --%>
-            <asp:XmlDataSource ID="XmlDataSourceLeft" runat="server" DataFile="~/App_Data/SideMenu.xml" XPath="/menu/*">
-
-            </asp:XmlDataSource>
+           
         </table>
 
         <dx:ASPxPanel ID="FooterPane" runat="server" FixedPosition="WindowBottom" ClientInstanceName="footerPane" CssClass="footerPane">
