@@ -82,7 +82,7 @@ html, body {
 .copyright 
 {
     float: left;
-    margin: 100px 15px 11px;
+    margin: 50px 15px 11px;
 }
 .content 
 {
@@ -127,9 +127,10 @@ html, body {
 {
     border-width: 1px !important;
 }
-.dxpnlControl_iOS.leftPane.panel
+.dxpnlControl_iOS.leftPane.panel 
 {
-    width: 235px;
+    width: 235px !important;
+    bottom: 50px !important;
 }
 .dxpnlControl_iOS.rightPane
 {
